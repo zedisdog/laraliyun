@@ -12,7 +12,9 @@ namespace Dezsidog\Laraliyun;
 use Dezsidog\AliyunSDK\Core\ClientFactory;
 use Dezsidog\AliyunSDK\Core\Config;
 use Dezsidog\AliyunSDK\Core\DefaultAcsClient;
+use Illuminate\Contracts\Console\Application;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use OSS\OssClient;
 
 class ServiceProvider extends BaseServiceProvider
 {
@@ -22,6 +24,16 @@ class ServiceProvider extends BaseServiceProvider
             Config::load();
             return ClientFactory::getClient(config('laraliyun'));
         });
+
+        $this->app->singleton(OssClient::class, function ($app){
+            return new OssClient(
+                config('laraliyun.oss.access_key_id'),
+                config('laraliyun.oss.access_key_secret'),
+                config('laraliyun.oss.endpoint')
+            );
+        });
+
+        $this->app->alias(OssClient::class, 'aliyun.oss');
     }
 
     public function boot()
