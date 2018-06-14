@@ -12,7 +12,7 @@ namespace Dezsidog\Laraliyun;
 use Dezsidog\AliyunSDK\Core\ClientFactory;
 use Dezsidog\AliyunSDK\Core\Config;
 use Dezsidog\AliyunSDK\Core\DefaultAcsClient;
-use Illuminate\Contracts\Console\Application;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use OSS\OssClient;
 
