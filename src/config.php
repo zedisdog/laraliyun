@@ -16,4 +16,9 @@ return [
             'end_point_name' => 'cn-hangzhou',
         ],
     ],
+    'oss' => [
+        'access_key_id' => 'access key',
+        'access_key_secret' => 'access secret',
+        'endpoint' => 'endpoint',
+    ],
 ];
