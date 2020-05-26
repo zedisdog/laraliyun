@@ -11,12 +11,12 @@
         "php": "^7.1.0",
         "dezsidog/aliyun-core": "^1.0",
         "dezsidog/aliyun-dysms": "^1.0",
-        "laravel/framework": "^5.5",
+        "laravel/framework": "^5.5|^7.0",
         "aliyuncs/oss-sdk-php": "^2.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.5",
-        "orchestra/testbench": "^3.5"
+        "phpunit/phpunit": "^6.5|^8.0",
+        "orchestra/testbench": "^3.5|^5.0"
     },
     "autoload": {
         "psr-4": {
@@ -29,12 +29,6 @@
             "providers": [
                 "Dezsidog\\Laraliyun\\ServiceProvider"
             ]
-        }
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
         }
     }
 }
